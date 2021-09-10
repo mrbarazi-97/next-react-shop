@@ -11,8 +11,20 @@ const useStyle = makeStyles({
   main: {
     minHeight: '80vh', // vh : viewport height and min is minimum
   },
+  grow: {
+    flexGrow: 1,
+  },
   footer: {
     textAlign: 'center',
+    marginTop: 10,
+  },
+  brand: {
+    fontWeight: 'bold',
+    fontSize: '1.8rem',
+  },
+  section: {
+    marginTop: 10,
+    marginBottom: 10,
   },
 });
 
