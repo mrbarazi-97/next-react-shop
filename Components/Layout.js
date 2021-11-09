@@ -10,12 +10,15 @@ import {
 } from '@material-ui/core';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import React from 'react';
+import React, { useContext } from 'react';
+import { Store } from '../utils/Store';
 import useStyle from '../utils/styles';
 
 export default function Layout({ title, description, children }) {
   // we use {children} fro see everything tag into <Layout> tag in the index.js
   const classes = useStyle();
+  const { state, dispatch } = useContext(Store);
+  const { darkMode } = state;
   const theme = createTheme({
     typography: {
       h1: {
@@ -33,7 +36,7 @@ export default function Layout({ title, description, children }) {
       },
     },
     palette: {
-      type: 'light',
+      type: darkMode ? 'dark' : 'light',
       primary: {
         main: '#f0c000',
       },
@@ -70,7 +73,7 @@ export default function Layout({ title, description, children }) {
         </AppBar>
         <Container className={classes.main}>{children}</Container>
         <footer className={classes.footer}>
-          <Typography>All rights reserved . Next Amazona.</Typography>
+          <Typography>All rights reserved . Azarland .</Typography>
         </footer>
       </ThemeProvider>
     </div>
