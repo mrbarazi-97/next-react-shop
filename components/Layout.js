@@ -60,7 +60,7 @@ export default function Layout({ title, description, children }) {
           <Toolbar>
             <NextLink href="/" passHref>
               <Link>
-                <Typography className={classes.brand}>amazona</Typography>
+                <Typography className={classes.brand}>Azarland</Typography>
               </Link>
             </NextLink>
             <div className={classes.grow}></div>
@@ -80,7 +80,7 @@ export default function Layout({ title, description, children }) {
         </AppBar>
         <Container className={classes.main}>{children}</Container>
         <footer className={classes.footer}>
-          <Typography>All rights reserved. Next Amazona.</Typography>
+          <Typography>All rights reserved. Azarland.</Typography>
         </footer>
       </ThemeProvider>
     </div>
